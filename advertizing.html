@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            display: inline-block;
+            width: 160px;
+            text-align: center;
+        }
+
+        input {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        textarea {
+            margin-top: 10px;
+            display: inline-block;
+            margin: 10px 0px 0px;
+            width: 534px;
+            height: 273px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(165, 83, 97);
+            color: #fff;
+        }
+
+        input[type="Reset"] {
+            background-color: rgb(165, 83, 97);
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .add {
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            font-family: "Courgette", cursive;
+        }
+
+        .main_heading__para {
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main_header">
+        <div class=" blog">
+            <h1 class="add">ADVERTISING</h1>
+            <p class="main_heading__para"> <u>Advertise with Fashion Diva</u> </p>
+        </div>
+    </header>
+    <form action="">
+        Name: <input type="text" id="name" placeholder=" Name"> <br>
+        <div class="ad">
+            Advertise <input type="text" id="body" placeholder="Body">
+        </div><br>
+
+        <input type="button" value="submit" onclick="addData()">
+    </form>
+
+    <!-- Name: <input type="text" id="name" placeholder=" Name"> <br>
+    <div class="ad">
+        Advertise <input type="text" id="body" placeholder="Body">
+    </div><br> -->
+
+    <!-- <input type="button" value="submit" onclick="addData()"> -->
+
+
+    <div id="results"></div>
+    <script>
+        function addData() {
+
+            let name = document.getElementById('name').value
+            let hTag = document.createElement('h4')
+            let hContent = document.createTextNode(name)
+            hTag.appendChild(hContent)
+            document.getElementById('results').appendChild(hTag)
+            let Add = document.getElementById('body').value
+            let pTag = document.createElement('p')
+            let pContent = document.createTextNode(Add)
+            pTag.setAttribute('style', 'border: 1px solid black ; width: 500px; background: white')
+            pTag.appendChild(pContent)
+            document.getElementById('results').appendChild(pTag)
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
